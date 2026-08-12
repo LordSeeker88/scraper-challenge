@@ -1,0 +1,36 @@
+/**
+ * Spanish message dictionary.
+ * Keep every key in sync across es.ts / pt.ts / en.ts.
+ */
+export const es = {
+  start: 'Iniciando extracción...',
+  end: 'Extracción finalizada.',
+  searching: 'Buscando documentos...',
+  pageProgress: 'Página {page} de {total} — {records} registros',
+  docFound: 'Documento: {id}',
+  downloadingPdf: 'Descargando PDF {n}/{total} — {name}',
+  pdfOk: 'PDF descargado: {name} ({bytes} bytes)',
+  pdfSkipped: 'PDF ya existe, se omite: {name}',
+  pdfFailed: 'PDF fallido: {name} — {error}',
+  retry429: '429 Too Many Requests. Reintento {attempt}/{max} en {delay} ms...',
+  givingUpDoc: 'Se renuncia al documento {id} tras {attempts} intentos.',
+  failedSaved: 'Fallas registradas en {path}',
+  resumeNotice: 'Reanudando desde la fila {first} (checkpoint).',
+  checkpointSaved: 'Checkpoint guardado: página {page} ({docs} documentos).',
+  cliHelp: 'Uso: npm run scrape -- [opciones]',
+  flagUnknown: 'Opción desconocida: {flag}. Use --help.',
+  siteUnknown: 'Sitio desconocido: {site}. Use "pj" u "oefa".',
+  langUnknown: 'Idioma desconocido: {lang}. Use es, pt o en.',
+  error: 'Error: {message}',
+  summary: 'Resumen: {docs} documentos, {pdfsOk} PDFs OK, {pdfsFailed} PDFs fallidos en {seconds}s',
+  noFailedFile: 'No hay archivo de fallas en {path}.',
+  retryFailedStart: 'Reintentando {n} PDF(s) fallidos...',
+  retryFailedEnd: 'Reintento finalizado: {ok} OK, {failed} fallidos.',
+  postSkippedRetry: '{n} PDF(s) basados en POST omitidos (dependen de la sesión); re-ejecuta el scraping para reintentarlos.',
+  pdfsDir: 'Directorio de PDFs: {dir}',
+  resultsWritten: 'Resultados: {path}',
+  csvExported: 'CSV exportado: {path} ({rows} filas)',
+  siteRecon: 'Sitio {site} requiere VPN (Perú). Ver docs/SITE_RECON.md.',
+  sessionExpired: 'Sesión JSF expirada. Reabriendo la página y reintentando...',
+  paginateNoProgress: 'El servidor no avanzó de página (paginación sin efecto). Deteniéndose para evitar un bucle.',
+} as const;

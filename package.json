@@ -1,0 +1,40 @@
+{
+  "name": "scraper-challenge",
+  "version": "1.0.0",
+  "description": "TypeScript scraper (no browser automation) for the Peruvian judiciary jurisprudence portal (PJ) with OEFA as a VPN-free test target. Handles JSF/PrimeFaces sessions, pagination, PDF downloads and 429 retry with exponential backoff.",
+  "type": "module",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc",
+    "scrape": "tsx src/main.ts",
+    "retry-failed": "tsx src/retry-failed.ts",
+    "export-csv": "tsx src/export-csv.ts",
+    "recon-pj": "tsx scripts/recon-pj.ts",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": [
+    "scraper",
+    "typescript",
+    "jsf",
+    "primefaces",
+    "jurisprudencia",
+    "pj",
+    "oefa",
+    "pdf"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "axios": "^1.19.0",
+    "cheerio": "^1.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.2.0",
+    "tsx": "^4.23.12",
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.10"
+  }
+}

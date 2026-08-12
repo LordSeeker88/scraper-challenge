@@ -1,0 +1,36 @@
+/**
+ * English message dictionary.
+ * Keep every key in sync across es.ts / pt.ts / en.ts.
+ */
+export const en = {
+  start: 'Starting extraction...',
+  end: 'Extraction finished.',
+  searching: 'Searching documents...',
+  pageProgress: 'Page {page} of {total} — {records} records',
+  docFound: 'Document: {id}',
+  downloadingPdf: 'Downloading PDF {n}/{total} — {name}',
+  pdfOk: 'PDF downloaded: {name} ({bytes} bytes)',
+  pdfSkipped: 'PDF already exists, skipping: {name}',
+  pdfFailed: 'PDF failed: {name} — {error}',
+  retry429: '429 Too Many Requests. Retry {attempt}/{max} in {delay} ms...',
+  givingUpDoc: 'Giving up on document {id} after {attempts} attempts.',
+  failedSaved: 'Failures recorded in {path}',
+  resumeNotice: 'Resuming from row {first} (checkpoint).',
+  checkpointSaved: 'Checkpoint saved: page {page} ({docs} documents).',
+  cliHelp: 'Usage: npm run scrape -- [options]',
+  flagUnknown: 'Unknown option: {flag}. Use --help.',
+  siteUnknown: 'Unknown site: {site}. Use "pj" or "oefa".',
+  langUnknown: 'Unknown language: {lang}. Use es, pt or en.',
+  error: 'Error: {message}',
+  summary: 'Summary: {docs} documents, {pdfsOk} PDFs OK, {pdfsFailed} PDFs failed in {seconds}s',
+  noFailedFile: 'No failures file at {path}.',
+  retryFailedStart: 'Retrying {n} failed PDF(s)...',
+  retryFailedEnd: 'Retry finished: {ok} OK, {failed} failed.',
+  postSkippedRetry: '{n} POST-based PDF(s) skipped (session-dependent); re-run the scrape to retry them.',
+  pdfsDir: 'PDF directory: {dir}',
+  resultsWritten: 'Results: {path}',
+  csvExported: 'CSV exported: {path} ({rows} rows)',
+  siteRecon: 'Site {site} requires VPN (Peru). See docs/SITE_RECON.md.',
+  sessionExpired: 'JSF session expired. Reopening the page and retrying...',
+  paginateNoProgress: 'Server did not advance pages (pagination has no effect). Stopping to avoid a loop.',
+} as const;
